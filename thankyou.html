@@ -7,17 +7,41 @@
     <link rel="stylesheet" href="css/lastpage.css" />
   </head>
   <body>
-    <div id="thankyou"><b>Thank you</b></div>
+    <h1 title="thankyou">Thank you</h1>
+    <form class="form-group">
+      <label>Hello, I'm Batbold. My friends and family call by Boogii.</label>
+    </form>
 
-    <img id="rizz" src="rizz.gif" alt="rizzler god" class="responsive" />
+    <img
+      id="rizz"
+      src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExeTF1cmdwbjAzemI1MWRnM2tsb2VnNnZyN3Y5aXVwb2s3bTlvOTJxaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TTedQxhzd5T4A/giphy.gif"
+      alt="rizz giff"
+      class="responsive"
+    />
     <br />
-    <audio controls autoplay loop>
-      <source src="congratulations.mp3" type="audio/mpeg" />
+    <audio id="myAudio" controls autoplay loop>
+      <source src="Daydream In Blue new.mp3" type="audio/mpeg" />
       Your browser does not support the audio element.
     </audio>
+
     <h1>Don't go yet!</h1>
     <button class="button" onclick="location.href='date.html'">
       Click me UWU
     </button>
+
+    <script>
+      const audio = document.getElementById("myAudio");
+
+      audio.addEventListener("play", function () {
+        audio.currentTime = 11; // 11-секундээс эхлүүлнэ
+      });
+
+      audio.addEventListener("timeupdate", function () {
+        if (audio.currentTime >= 36) {
+          // 33-секундэд зогсооно
+          audio.pause();
+        }
+      });
+    </script>
   </body>
 </html>
