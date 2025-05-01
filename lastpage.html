@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="css/flower.css" />
   </head>
   <body>
-    <div id="thankyou"><b>Nice to meet you</b></div>
+    <div id="thankyou">
+      <b>Nice to meet you <span id="usernameDisplay"></span>.</b>
+    </div>
+
     <div class="flower">
       <div class="f-wrapper">
         <div class="flower__line"></div>
@@ -58,5 +61,11 @@
       </div>
       <div class="flower__glass"></div>
     </div>
+    <script>
+      const savedName = localStorage.getItem("username");
+      if (savedName) {
+        document.getElementById("usernameDisplay").textContent = savedName;
+      }
+    </script>
   </body>
 </html>
